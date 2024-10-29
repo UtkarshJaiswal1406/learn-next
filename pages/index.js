@@ -1,6 +1,8 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-
+import Blog from "./blog";
+import Backside from "./backside";
+import Link from 'next/link';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -11,105 +13,21 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+export default function home() {
+  return (<div className="h-screen bg-gradient-to-b from-purple-200 to-green-500" >
+      <h1 className="text-4xl text-center pt-3">Hello world</h1>
+      <br></br>
+      <hr className="pt-4 border-green-500"></hr>
+      <nav className="">
+      <ul class="flex justify-end space-x-4 mr-4">
+      <li><p href=""><button className="flex pl-2 pr-3 bg-blue-200 rounded border border-purple-500 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">home</button></p></li>
+      <li><Link href="/about"><button className="flex pl-2 pr-3 bg-blue-200 rounded border border-purple-500 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">about</button></Link></li>
+      </ul>
+      </nav>
+      <br></br>
+      <hr className="pt-4 border-green-500"></hr>
+      <h1 className="grid text-3xl p-4 text-center text-red-500">Home page</h1>
+      <p className="flex mr-2 ml-2">"Hello World!" is more than just a simple phrase; it is a powerful symbol in the programming community, representing the first step for countless beginners embarking on their coding journeys. This introductory program, which displays the text "Hello, World!" on the screen, is often the first piece of code that aspiring programmers write when learning a new programming language. Its simplicity belies its significance, as it encapsulates fundamental programming concepts, including syntax, structure, and the method for outputting text to a console or screen. The origins of the "Hello, World!" program can be traced back to the early days of computer science, gaining popularity through the influential book *The C Programming Language* by Brian Kernighan and Dennis Ritchie, published in 1978. This iconic example is not just a trivial exercise; it serves as a gateway into more complex programming concepts and logic. The program instills a sense of achievement and motivation in beginners, as seeing their first output can inspire confidence and curiosity about coding. Over the years, "Hello, World!" has transcended its original purpose, evolving into a cultural touchstone within the tech community, symbolizing the excitement and challenges of learning to program. Its presence can be felt in numerous coding boot camps, online tutorials, and educational courses, reminding learners that every expert was once a beginner. Whether in Python, Java, JavaScript, or any other language, the act of writing this simple program marks the start of a new adventure into the vast and creative world of programming, encouraging individuals to explore, innovate, and push the boundaries of what they can create.</p><Backside/>
     </div>
-  );
+    );
 }
