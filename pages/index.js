@@ -1,6 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-
+import Blog from "./about"
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -61,6 +61,14 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <a href = "/about" className="rounded-full bg-cyan-600 border border-solid border-black/[.08] dark:border-white/[.145] flex items-center jutify-center hover:bg-[#3f788c] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44">
+          Go to about page <Image
+              className="dark:invert ml-2"
+              src="/arrow-right.svg"
+              alt="arrow-right"
+              width={20}
+              height={20}
+            /></a>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
