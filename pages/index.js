@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Kt from "./kt";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -60,6 +61,19 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             Read our docs
+          </a>
+          <a
+            className="bg-purple-700
+            p-5
+            rounded-full
+            hover:bg-purple-900
+            hover:text-neutral-400
+            duration-500"
+            href="/kt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click Here!
           </a>
         </div>
       </main>
