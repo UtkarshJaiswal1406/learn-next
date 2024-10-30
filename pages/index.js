@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import React from 'react';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +12,21 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const Index = () => {
+  return (
+    <div
+      className="flex items-center justify-center min-h-screen bg-gray-200"
+      style={{ fontFamily: "var(--font-geist-mono)" }} 
+    >
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+        onClick={() => window.location.href = 'MainHTML2.html'}
+      >
+        Visit Our Community
+      </button>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
