@@ -10,7 +10,11 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'pink': "#2e1032"
       },
+      container: {
+        center: true,
+      }
     },
   },
   plugins: [],
